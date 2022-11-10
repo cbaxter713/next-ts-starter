@@ -17,7 +17,7 @@ const theme = createTheme({
 
     /** Palette default colors config */
     primary: {
-      main: purple[500],
+      main: purple[700],
     },
     secondary: {
       main: "#11cb5f",

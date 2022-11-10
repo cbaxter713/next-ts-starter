@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Welcome from "../components/welcome";
 import styles from "../styles/Home.module.css";
-import { Props } from "../components/welcome";
+import { WelcomeProps } from "../components/welcome";
 
 export default function Home() {
-  const welcomeProps: Props = {
+  const welcomeProps: WelcomeProps = {
     title: "test 12",
     onClick: () => alert("how bout di"),
   };

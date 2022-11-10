@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-export type Props = {
-  /** color to use for the background */
+export type WelcomeProps = {
+  /** Title text to display in the welcome */
   title: string;
   /** standard children prop: accepts any valid React Node */
   // children: React.ReactNode;
@@ -9,7 +9,7 @@ export type Props = {
   onClick?: () => void;
 };
 
-const Welcome: FC<Props> = ({ title, onClick = () => {} }) => {
+const Welcome: FC<WelcomeProps> = ({ title, onClick = () => {} }) => {
   return (
     <div className="welcome-page">
       <h1>{title}</h1>

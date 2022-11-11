@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import { FC } from "react";
 
 export type WelcomeProps = {
@@ -14,6 +15,16 @@ const Welcome: FC<WelcomeProps> = ({ title, onClick = () => {} }) => {
     <div className="welcome-page">
       <h1>{title}</h1>
       <button onClick={onClick}>Click me</button>
+      <Button
+        ml={3}
+        colorScheme="orange"
+        size="lg"
+        variant="outline"
+        className="welcome-button"
+        onClick={onClick}
+      >
+        Click me
+      </Button>
     </div>
   );
 };

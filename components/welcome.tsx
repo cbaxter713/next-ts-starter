@@ -1,5 +1,4 @@
 import { Button, Flex, Heading, useColorMode } from "@chakra-ui/react";
-import { useTheme } from "@emotion/react";
 import { FC } from "react";
 
 export type WelcomeProps = {
@@ -13,8 +12,6 @@ export type WelcomeProps = {
 
 const Welcome: FC<WelcomeProps> = ({ title, onClick = () => {} }) => {
   const { toggleColorMode } = useColorMode();
-  const theme = useTheme();
-  console.log("theme is: ", theme);
 
   return (
     <Flex justifyContent="center" className="welcome-page" bg="ghosty.900">

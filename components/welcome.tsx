@@ -1,4 +1,5 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Flex, Heading, useColorMode } from "@chakra-ui/react";
+import { useTheme } from "@emotion/react";
 import { FC } from "react";
 
 export type WelcomeProps = {
@@ -11,21 +12,29 @@ export type WelcomeProps = {
 };
 
 const Welcome: FC<WelcomeProps> = ({ title, onClick = () => {} }) => {
+  const { toggleColorMode } = useColorMode();
+  const theme = useTheme();
+  console.log("theme is: ", theme);
+
   return (
-    <div className="welcome-page">
-      <h1>{title}</h1>
-      <button onClick={onClick}>Click me</button>
-      <Button
-        ml={3}
-        colorScheme="orange"
-        size="lg"
-        variant="outline"
-        className="welcome-button"
-        onClick={onClick}
-      >
-        Click me
-      </Button>
-    </div>
+    <Flex justifyContent="center" className="welcome-page" bg="ghosty.900">
+      <Flex direction="column" gap={3} width="400px" p={12}>
+        <Heading>{title}</Heading>
+        <button onClick={onClick}>Click me</button>
+        <Button
+          colorScheme="orange"
+          size="lg"
+          variant="outline"
+          className="welcome-button"
+          onClick={onClick}
+        >
+          Click me
+        </Button>
+        <Button colorScheme="teal" size="md" onClick={toggleColorMode}>
+          Change Color Mode
+        </Button>
+      </Flex>
+    </Flex>
   );
 };
 

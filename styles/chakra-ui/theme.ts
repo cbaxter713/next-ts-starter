@@ -10,7 +10,11 @@ const theme = extendTheme({
     brand: {
       100: "#f7fafc",
       // ...
-      900: "#1a202c",
+      900: "#6e2c27",
+    },
+    ghosty: {
+      100: "red",
+      900: "purple",
     },
   },
 });

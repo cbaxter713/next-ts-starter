@@ -5,7 +5,7 @@ import { WelcomeProps } from "../components/welcome";
 
 export default function Home() {
   const welcomeProps: WelcomeProps = {
-    title: "test 12",
+    title: "Next app check it out",
     onClick: () => alert("how bout di"),
   };
 

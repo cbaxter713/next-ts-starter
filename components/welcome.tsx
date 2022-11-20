@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 
 export type WelcomeProps = {
@@ -14,6 +15,7 @@ const Welcome: FC<WelcomeProps> = ({ title, onClick = () => {} }) => {
     <div className="welcome-page">
       <h1>{title}</h1>
       <button onClick={onClick}>Click me</button>
+      <Link href="products/49">To Product 49</Link>
     </div>
   );
 };

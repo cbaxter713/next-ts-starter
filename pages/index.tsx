@@ -5,7 +5,7 @@ import { WelcomeProps } from "../components/welcome";
 
 export default function Home() {
   const welcomeProps: WelcomeProps = {
-    title: "Some new push",
+    title: "Some new push, Netlify this time",
     onClick: () => alert("how bout di"),
   };
 
